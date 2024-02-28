@@ -1,7 +1,9 @@
 import React from 'react';
 import './Home.css';
 import farmacia from '../../assets/farmacia.png';
-
+import ListaPruduto from '../../components/produtos/listaProdutos/ListaProduto';
+import ListaProduto from '../../components/produtos/listaProdutos/ListaProduto';
+import ModalProdutos from '../../components/produtos/modalProdutos/ModalProdutos';
 function Home(){
     return (
         <>
@@ -21,9 +23,9 @@ function Home(){
                         </h1>
                     </div>
                     <div className='ml-20'><p>Na Farmácia Generation, você encontra os principais produtos, além de poder contribuir cadastrando o seu próprio!</p>			</div>
-                    <div>
-			<button className='rounded-full bg-orange-400 text-black-800 py-6 px-14'>Cadastre o seu produto</button>
-			</div>
+                    <div className="flex justify-around gap-4">
+              <ModalProdutos />
+            </div>
                     
                 </div>  
                 <div className=' flex items-center
@@ -34,8 +36,10 @@ function Home(){
                     </div>
                     
                 </div>
+
         </div>
         </div>
+        <ListaProduto />
         </>
     );
 }
